@@ -1,34 +1,11 @@
 @use "sass:math";
 @use "vars" as *;
 
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ФУНКЦІЇ
-
-// //Percent
-// @function percent($px, $from: 100) {
-//   $result: math.div($px, $from) * 100%;
-//   @return $result;
-// }
-
-// //REM
-// @function to-rem($px, $current: 16) {
-//   $result: math.div($px, $current) + rem;
-//   @return $result;
-// }
-
-// //EM
-// @function to-em($px, $current: 16) {
-//   $result: math.div($px, $current) + em;
-//   @return $result;
-// }
 
 @function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
   $return-value: calc(#{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width})));
   @return $return-value;
 }
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// АДАПТИВНА ВЛАСТИВІСТЬ
 
 @mixin adaptive-property($property,
   $mobile-size,
@@ -182,11 +159,11 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// @mixin position-r {
-//   position: relative;
-//   left: 0;
-//   top: 0;
-// }
+@mixin position-r {
+  position: relative;
+  left: 0;
+  top: 0;
+}
 
 @mixin ibg($size: cover) {
   overflow: hidden;
@@ -198,9 +175,3 @@
     object-position: center;
   }
 }
-
-// @mixin p-margin {
-//   &__text p:not(:last-child) {
-//     margin-bottom: 0.625rem;
-//   }
-// }
