@@ -1,0 +1,57 @@
+@use "../utils/_index" as *;
+
+.team {
+  &__content {
+    @include adaptive-property(padding-block, 60,  0, 120);
+  }
+}
+.row-team {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  @include adaptive-property(gap, 10,  0, 30);
+  @media (min-width: 491px) {
+    flex-basis: 50%;
+    flex-wrap: nowrap;
+  }
+  @include on-mobile-l {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+.row-team--reverse {
+  flex-direction: row-reverse;
+}
+
+.item-row {
+  flex: 0 1 100%;
+  max-width: 465px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 491px) {
+    flex-basis: 50%;
+  }
+  &__title {
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.5, rem);
+  }
+  &__main-title {
+    margin-bottom: 0.75rem;
+  }
+  &__text {
+    display: flex;
+    row-gap: 0.625rem;
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.5, rem);
+  }
+  &__img {
+    width: 100%;
+    aspect-ratio: 720.5 / 550;
+    @include ibg;
+  }
+  &__button {
+    margin-bottom: 16px;
+  }
+}
+.item-row--img {
+  max-width: 720.5px;
+}

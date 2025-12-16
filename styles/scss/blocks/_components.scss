@@ -19,7 +19,7 @@
   }
 }
 
-.header-title {
+.section-title {
   font-weight: 600;
   line-height: 150%; /* 54px/36 */
   color: $tex-color-secondary;
@@ -27,6 +27,7 @@
 }
 
 .button {
+  width: fit-content;
   z-index: 1;
   position: relative;
   color: $tex-color-secondary;
