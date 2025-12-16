@@ -1,0 +1,65 @@
+@use "../utils/_index" as *;
+
+.hero {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    @include ibg;
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    min-height: 100svh;
+    @include flex-center;
+    flex-direction: column;
+  }
+  &__hello,
+  &__title {
+    line-height: 150%; /* 24px/16 */
+    text-align: center;
+    color: $tex-color-secondary;
+    text-transform: uppercase;
+  }
+  &__hello {
+    margin-top: 42px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 73px;
+      height: 2px;
+      border-radius: 5px;
+      background-color: $color-red;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    @include adaptive-property(font-size, 2, 0, 4, rem);
+    @include adaptive-property(margin-bottom, 1.25, 0, 2, rem);
+  }
+  &__buttons {
+    display: flex;
+    column-gap: 8px;
+  }
+}
