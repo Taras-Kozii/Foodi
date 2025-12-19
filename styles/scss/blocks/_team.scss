@@ -4,6 +4,14 @@
   &__content {
     @include adaptive-property(padding-block, 60,  0, 120);
   }
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    @include on-tablet {
+      row-gap: 0;
+    }
+  }
 }
 .row-team {
   display: flex;
@@ -21,6 +29,9 @@
 }
 .row-team--reverse {
   flex-direction: row-reverse;
+  .item-row {
+   margin-right: auto;
+  }
 }
 
 .item-row {
@@ -45,11 +56,11 @@
   }
   &__img {
     width: 100%;
-    aspect-ratio: 720.5 / 550;
+    height: 100%;
     @include ibg;
-  }
-  &__button {
-    margin-bottom: 16px;
+    @include on-mobile-l {
+      aspect-ratio: 720.5 / 550;
+    }
   }
 }
 .item-row--img {

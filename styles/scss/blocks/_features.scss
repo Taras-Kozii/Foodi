@@ -1,0 +1,64 @@
+@use "../utils/_index" as *;
+
+.features {
+  &__content {
+    @include adaptive-property(margin-bottom, 60, 0, 120);
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 784px;
+    text-align: center;
+    margin-inline: auto;
+    @include adaptive-property(margin-bottom, 32, 0, 72);
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      font-weight: 500;
+      line-height: 150%; /* 24px/16 */
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include on-desktop {
+      justify-content: space-between;
+    }
+  }
+}
+.item-features {
+  max-width: 347px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img {
+    width: 72px;
+    aspect-ratio: 1 / 1;
+    @include ibg(contain);
+    @include adaptive-property(margin-bottom, 20, 0, 48);
+  }
+  &__title {
+    font-weight: 600;
+    line-height: 150%; /* 36px/24 */
+    text-align: center;
+    color: $tex-color-secondary;
+    @include adaptive-property(font-size, 1, 0, 1.5, rem);
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.5, rem);
+  }
+  &__text {
+    p {
+      font-weight: 500;
+      line-height: 150%; /* 24px/16 */
+      text-align: justify;
+    }
+  }
+}
