@@ -30,6 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 30px;
     @include on-desktop {
       justify-content: space-between;
     }

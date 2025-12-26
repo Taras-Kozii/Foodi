@@ -184,6 +184,7 @@ h6 {
   padding-block: 0.875rem;
   cursor: pointer;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .button-border-show {
@@ -674,6 +675,7 @@ h6 {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  row-gap: 30px;
 }
 @media (min-width: 1470px) {
   .features__items {
@@ -737,4 +739,295 @@ h6 {
   font-weight: 500;
   line-height: 150%; /* 24px/16 */
   text-align: justify;
+}
+
+.reservation {
+  background-image: url("../../images/reservation.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reservation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 40px;
+  padding-block: 78px;
+}
+@media (max-width: 1440px) {
+  .reservation__content {
+    padding-block: calc(34px + (44) * (100vw - 320px) / (1120));
+  }
+}
+@media (min-width: 767.98px) {
+  .reservation__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.reservation__action, .reservation__date {
+  max-width: 32.222222%; /* 464px/1440 */
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.reservation__title {
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 1440px) {
+  .reservation__title {
+    margin-bottom: calc(0.625rem + (0.625) * (100vw - 20rem) / (70));
+  }
+}
+.reservation__subtitle {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .reservation__subtitle {
+    margin-bottom: calc(0.75rem + (0.75) * (100vw - 20rem) / (70));
+  }
+}
+.reservation__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+.reservation__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+  background-color: #000;
+  padding-block: 102px;
+  padding-inline: 79px;
+  row-gap: 80px;
+}
+@media (max-width: 1440px) {
+  .reservation__date {
+    padding-block: calc(50px + (52) * (100vw - 320px) / (1120));
+  }
+}
+@media (max-width: 1440px) {
+  .reservation__date {
+    padding-inline: calc(38px + (41) * (100vw - 320px) / (1120));
+  }
+}
+@media (max-width: 1440px) {
+  .reservation__date {
+    row-gap: calc(40px + (40) * (100vw - 320px) / (1120));
+  }
+}
+.reservation__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+}
+@media (max-width: 1440px) {
+  .reservation__item {
+    row-gap: calc(10px + (10) * (100vw - 320px) / (1120));
+  }
+}
+.reservation__day {
+  font-weight: 600;
+  line-height: 150%; /* 36px/24 */
+  color: #fff;
+  font-size: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .reservation__day {
+    font-size: calc(1rem + (0.5) * (100vw - 20rem) / (70));
+  }
+}
+.reservation__time {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px/20 */
+  color: #fff;
+  font-size: 1.25rem;
+}
+@media (max-width: 1440px) {
+  .reservation__time {
+    font-size: calc(0.875rem + (0.375) * (100vw - 20rem) / (70));
+  }
+}
+
+.foods__content {
+  padding-block: 120px;
+}
+@media (max-width: 1440px) {
+  .foods__content {
+    padding-block: calc(60px + (60) * (100vw - 320px) / (1120));
+  }
+}
+.foods__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.foods-header {
+  max-width: 784px;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 72px;
+}
+@media (max-width: 1440px) {
+  .foods-header {
+    margin-bottom: calc(30px + (42) * (100vw - 320px) / (1120));
+  }
+}
+
+.item-foods {
+  -ms-flex-preferred-size: calc(100% - 20px);
+      flex-basis: calc(100% - 20px);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #121a1d;
+}
+@media (min-width: 479.98px) {
+  .item-foods {
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
+  }
+}
+@media (min-width: 991.98px) {
+  .item-foods {
+    -ms-flex-preferred-size: calc(33.333% - 20px);
+        flex-basis: calc(33.333% - 20px);
+  }
+}
+.item-foods__img {
+  aspect-ratio: 464/320;
+  overflow: hidden;
+}
+.item-foods__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.item-foods__content {
+  padding: 20px;
+}
+@media (max-width: 1440px) {
+  .item-foods__content {
+    padding: calc(10px + (10) * (100vw - 320px) / (1120));
+  }
+}
+.item-foods__title {
+  font-weight: 600;
+  line-height: 150%; /* 36px/24 */
+  color: #d68240;
+  margin-bottom: 0.3125rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .item-foods__title {
+    font-size: calc(0.75rem + (0.75) * (100vw - 20rem) / (70));
+  }
+}
+.item-foods__time {
+  font-weight: 500;
+  line-height: 150%; /* 24px/16 */
+  color: #797b78;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1440px) {
+  .item-foods__time {
+    font-size: calc(0.75rem + (0.25) * (100vw - 20rem) / (70));
+  }
+}
+@media (max-width: 1440px) {
+  .item-foods__time {
+    margin-bottom: calc(0.5rem + (0.5) * (100vw - 20rem) / (70));
+  }
+}
+.item-foods__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.item-foods__price strong {
+  font-weight: 600;
+  line-height: 150%; /* 36px/24 */
+  font-size: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .item-foods__price strong {
+    font-size: calc(1.125rem + (0.375) * (100vw - 20rem) / (70));
+  }
+}
+@media (max-width: 1440px) {
+  .item-foods__price {
+    margin-bottom: calc(0.5rem + (0.5) * (100vw - 20rem) / (70));
+  }
+}
+.item-foods__new-price {
+  color: #d68240;
+}
+.item-foods__old-price {
+  text-decoration-line: line-through;
+  color: #797b78;
+}
+.item-foods__button {
+  color: #121a1d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 175%; /* 28px/16 */
+  text-transform: none;
 }

@@ -1,0 +1,67 @@
+@use "../utils/_index" as *;
+
+.reservation {
+  background-image: url("../../images/reservation.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 40px;
+    @include adaptive-property(padding-block, 34, 0, 78);
+    @include on-mobile-l {
+      justify-content: space-between;
+    }
+  }
+  &__action,
+  &__date {
+    max-width: 32.222222%; /* 464px/1440 */
+    min-width: fit-content;
+  }
+  &__title {
+    @include adaptive-property(margin-bottom, 0.625, 0, 1.25, rem);
+  }
+  &__subtitle {
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.5, rem);
+  }
+  &__buttons {
+    display: flex;
+    column-gap: 8px;
+  }
+  &__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: $radius;
+    background-color: $bg-color-main;
+    @include adaptive-property(padding-block, 50, 0, 102);
+    @include adaptive-property(padding-inline, 38, 0, 79);
+    @include adaptive-property(row-gap, 40, 0, 80);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptive-property(row-gap, 10, 0, 20);
+  }
+  &__day {
+    font-weight: 600;
+    line-height: 150%; /* 36px/24 */
+    color: $tex-color-secondary;
+    @include adaptive-property(font-size, 1, 0, 1.5, rem);
+  }
+  &__time {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%; /* 30px/20 */
+    color: $tex-color-secondary;
+    @include adaptive-property(font-size, 0.875, 0, 1.25, rem);
+  }
+}

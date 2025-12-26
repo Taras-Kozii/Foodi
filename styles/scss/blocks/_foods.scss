@@ -1,0 +1,78 @@
+@use "../utils/_index" as *;
+
+.foods {
+  &__content {
+    @include adaptive-property(padding-block, 60, 0, 120);
+  }
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.foods-header {
+  max-width: 784px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include adaptive-property(margin-bottom, 30, 0, 72);
+}
+.item-foods {
+  flex-basis: calc(100% - 20px);
+  border-radius: $radius;
+  overflow: hidden;
+  background: #121a1d;
+  @include on-mobile-s {
+    flex-basis: calc(50% - 20px);
+  }
+  @include on-tablet {
+    flex-basis: calc(33.333% - 20px);
+  }
+  &__img {
+    aspect-ratio: 464 / 320;
+    @include ibg;
+  }
+  &__content {
+    @include adaptive-property(padding, 10, 0, 20);
+  }
+  &__title {
+    font-weight: 600;
+    line-height: 150%; /* 36px/24 */
+    color: $color-red;
+    margin-bottom: 0.3125rem;
+    @include adaptive-property(font-size, 0.75, 0, 1.5, rem);
+  }
+  &__time {
+    font-weight: 500;
+    line-height: 150%; /* 24px/16 */
+    color: #797b78;
+    @include adaptive-property(font-size, 0.75, 0, 1, rem);
+    @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
+  }
+  &__price {
+    display: flex;
+    column-gap: 0.5rem;
+    strong {
+      font-weight: 600;
+      line-height: 150%; /* 36px/24 */
+      @include adaptive-property(font-size, 1.125, 0, 1.5, rem);
+    }
+    @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
+  }
+  &__new-price {
+    color: $color-red;
+  }
+  &__old-price {
+    text-decoration-line: line-through;
+    color: #797b78;
+  }
+  &__button {
+    color: #121a1d;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 175%; /* 28px/16 */
+    text-transform: none;
+  }
+}
